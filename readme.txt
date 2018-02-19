@@ -9,7 +9,7 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Простой WordPress плагин кнопок социальных сетей
+Simple WordPress plug-in social networking buttons
 
 == Description ==
 
