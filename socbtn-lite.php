@@ -1,10 +1,11 @@
 <?php defined( 'ABSPATH' ) OR die();
 
 /*
-Plugin Name: Кнопки социальных сетей
-Description: (shotrcode [socbtn]) Facebook, Google+, LinkedIn, Instagram, VK 
+Plugin Name: Simple social buttons
+Description: (shotrcode [socbtn]) Facebook, Twitter, Google+, LinkedIn, Instagram, VK 
 Version: 0.0.1
-Author: HalcheSM testapiw@gmail.com
+Author: HalcheSM
+Author URI:testapiw@gmail.com
 */
 
 define( 'SOCBTN', '1' );
@@ -18,7 +19,8 @@ add_shortcode( 'socbtn', 'socbtn_html' );
 
 if ( ! function_exists( 'socbtn_html' ) && ! is_admin() ) {
 	
-	function socbtn_html( $atts ) {
+	function socbtn_html( $atts ) 
+	{
 		
 		$atts = shortcode_atts( array(
 			'facebook'  => 1,
@@ -31,50 +33,50 @@ if ( ! function_exists( 'socbtn_html' ) && ! is_admin() ) {
 
 		wp_enqueue_script( 'socbtn-lite', SOCBTN_ASSETS . 'js/socbtn.js', array( 'jquery' ), SOCBTN_VERSION, true );
 
-		wp_enqueue_style( 'socbtn-lite', SOCBTN_ASSETS . 'css/socbtn.css', false, SOCBTN_VERSION ); 
+		wp_enqueue_style( 'socbtn-lite', SOCBTN_ASSETS . 'css/socbtn.css', false, SOCBTN_VERSION );
 
 		echo '<div class="social-button">';
 
 		if ( isset($atts[ 'facebook' ] ) && $atts[ 'facebook' ] ) : ?>
 		<div class="socbtn" data-socbtn="facebook">
-			<div class="icon facebook"></div> 
+			<div class="icon facebook"></div>
 			<span class="counter"></span>
 		</div>
 		<?php endif; ?>
 		<?php if ( isset($atts[ 'twitter' ] ) && $atts[ 'twitter' ] ) : ?>
 		<div class="socbtn" data-socbtn="twitter">
-			<div class="icon twitter"></div> 
+			<div class="icon twitter"></div>
 			<span class="counter"></span>
 		</div>
-		<?php endif; ?>		
-		<?php if ( isset($atts[ 'instagram' ] ) && $atts[ 'instagram' ]  ) : ?> 
+		<?php endif; ?>
+		<?php if ( isset($atts[ 'instagram' ] ) && $atts[ 'instagram' ]  ) : ?>
 		<div class="socbtn" data-socbtn="instagram">
-			<div class="icon instagram"></div> 
+			<div class="icon instagram"></div>
 			<!--img src="<?php //echo SOCBTN_ASSETS; ?>css/soc_icon/instagram-hover.svg"//-->
 			<span class="counter"></span>
 		</div>
 		<?php endif; ?>
 
-		<?php if ( isset($atts[ 'google' ] ) && $atts[ 'google' ]  ) : ?> 
+		<?php if ( isset($atts[ 'google' ] ) && $atts[ 'google' ]  ) : ?>
 		<div  class="socbtn" data-socbtn="google">
-			<div class="icon google"></div> 
+			<div class="icon google"></div>
 			<span class="counter"></span>
 		</div>
 		<?php endif; ?>
 	
-		<?php if ( isset($atts[ 'linkedIn' ] ) && $atts[ 'linkedIn' ]  ) : ?> 
+		<?php if ( isset($atts[ 'linkedIn' ] ) && $atts[ 'linkedIn' ]  ) : ?>
 		<div  class="socbtn" data-socbtn="linkedIn">
-			<div class="icon linkedin"></div> 
+			<div class="icon linkedin"></div>
 			<span class="counter"></span>
 		</div>
 		<?php endif; ?>
 
-		<?php if ( isset($atts[ 'vk' ] ) && $atts[ 'vk' ]  ) : ?> 
+		<?php if ( isset($atts[ 'vk' ] ) && $atts[ 'vk' ]  ) : ?>
 		<div  class="socbtn" data-socbtn="vk">
-			<div class="icon vk"></div> 
+			<div class="icon vk"></div>
 			<span class="counter"></span>
 		</div>
-		<?php endif; 
+		<?php endif;
 
 		echo '</div>';
 	

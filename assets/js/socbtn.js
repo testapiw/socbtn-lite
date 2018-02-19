@@ -2,7 +2,7 @@
     var 
         description = document.querySelector('meta[name="description"]'),
         data = {
-            href  : encodeURIComponent( document.location.href || '' ), 
+            href  : encodeURIComponent( document.location.href || '' ),
             title : encodeURIComponent( document.title || '' ),
             description : encodeURIComponent(description.content) || '',
             image : ''
@@ -14,14 +14,14 @@
             counter: 'https://graph.facebook.com/?id={{href}}&callback={{callback}}',
             get_count: function(counter) { return counter.share.share_count || '';}
         },
-            
+
         'instagram' : {
             share : 'https://www.instagram.com'
         },
         'google'    : {
             share: 'https://plus.google.com/share?url={{href}}',
             ajax : googlecounter
-           
+
         },
         'linkedIn'  : {
             share: 'https://www.linkedin.com/shareArticle?mini=true&url={{href}}&text={{title}}&summary={{description}}&mini=true',
@@ -48,8 +48,8 @@ function set_counter(el, soc) {
         return true;
     }
 
-    script = document.createElement('script');
-    callback = ('liteshare_' + Math.random()).replace('.', '');
+    script    = document.createElement('script');
+    callback  = ('liteshare_' + Math.random()).replace('.', '');
     count_url = _(src[soc].counter, { href :data.href, callback:callback });
 
     window[callback] = function(counter) {
@@ -58,7 +58,7 @@ function set_counter(el, soc) {
         }
         script.parentNode.removeChild(script);
     };
-      
+
     script.src = count_url;
     document.body.appendChild(script);
 }
