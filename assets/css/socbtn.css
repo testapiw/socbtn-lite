@@ -1,0 +1,75 @@
+/* https://www.iconfinder.com/editor/ */
+.social-button {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+.socbtn {
+    margin-left: 5px;
+    cursor:pointer;
+}
+.socbtn .icon {
+    width: 42px;
+    height: 42px;
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;
+    -moz-transition:-moz-transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;
+    -ms-transition: -ms-transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;
+    -o-transition: -o-transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;
+    transition: transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;  
+}
+.socbtn .icon:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.socbtn .facebook { 
+    background-image: url('soc_icon/facebook.svg');
+    background-repeat: no-repeat;
+}
+
+.socbtn .facebook:hover { 
+    background-image: url('soc_icon/facebook-hover.svg');
+    background-color: #3c5a99;
+}
+.socbtn .google { 
+    background-repeat: no-repeat;
+    background-image: url('soc_icon/google.svg');
+}
+.socbtn .google:hover { 
+    background-image: url('soc_icon/google-hover.svg');
+    background-color: #de4b39;
+}
+.socbtn .linkedin { 
+    background-repeat: no-repeat;
+    background-image: url('soc_icon/in.svg');
+}
+.socbtn .linkedin:hover { 
+    background-image: url('soc_icon/in-hover.svg');
+    background-color: #007bb5;
+}
+.socbtn .vk { 
+    background-image: url('soc_icon/vk.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .vk:hover { 
+    background-image: url('soc_icon/vk-hover.svg');
+    background-color: #5281b7;
+}    
+.socbtn .instagram { 
+    background-image: url('soc_icon/instagram.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .instagram:hover { 
+    background-image: url('soc_icon/instagram-hover.svg');
+    background-color: #ba31a5;
+}
+.socbtn .twitter { 
+    background-image: url('soc_icon/twitter.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .twitter:hover { 
+    background-image: url('soc_icon/twitter-hover.svg');
+    background-color: #55acee;
+}      
