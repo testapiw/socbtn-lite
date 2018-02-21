@@ -21,64 +21,54 @@ if ( ! function_exists( 'socbtn_html' ) && ! is_admin() ) {
 	
 	function socbtn_html( $atts ) 
 	{
-		
+
 		$atts = shortcode_atts( array(
 			'facebook'  => 1,
 			'twitter'	=> 1,
 			'google' 	=> 1,
 			'instagram' => 1,
-			'linkedIn'  => 1,
-			'vk'	    => 1
+			'linkedin'  => 1,
+			'vk'	    => 1,
+			'position'  => ''
 		), $atts );
 
 		wp_enqueue_script( 'socbtn-lite', SOCBTN_ASSETS . 'js/socbtn.js', array( 'jquery' ), SOCBTN_VERSION, true );
 
 		wp_enqueue_style( 'socbtn-lite', SOCBTN_ASSETS . 'css/socbtn.css', false, SOCBTN_VERSION );
 
-		echo '<div class="social-button">';
+		$position = '';
 
-		if ( isset($atts[ 'facebook' ] ) && $atts[ 'facebook' ] ) : ?>
-		<div class="socbtn" data-socbtn="facebook">
-			<div class="icon facebook"></div>
-			<span class="counter"></span>
-		</div>
-		<?php endif; ?>
-		<?php if ( isset($atts[ 'twitter' ] ) && $atts[ 'twitter' ] ) : ?>
-		<div class="socbtn" data-socbtn="twitter">
-			<div class="icon twitter"></div>
-			<span class="counter"></span>
-		</div>
-		<?php endif; ?>
-		<?php if ( isset($atts[ 'instagram' ] ) && $atts[ 'instagram' ]  ) : ?>
-		<div class="socbtn" data-socbtn="instagram">
-			<div class="icon instagram"></div>
-			<!--img src="<?php //echo SOCBTN_ASSETS; ?>css/soc_icon/instagram-hover.svg"//-->
-			<span class="counter"></span>
-		</div>
-		<?php endif; ?>
+		if ( ! empty( $atts[ 'position' ] ) ) {
 
-		<?php if ( isset($atts[ 'google' ] ) && $atts[ 'google' ]  ) : ?>
-		<div  class="socbtn" data-socbtn="google">
-			<div class="icon google"></div>
-			<span class="counter"></span>
-		</div>
-		<?php endif; ?>
-	
-		<?php if ( isset($atts[ 'linkedIn' ] ) && $atts[ 'linkedIn' ]  ) : ?>
-		<div  class="socbtn" data-socbtn="linkedIn">
-			<div class="icon linkedin"></div>
-			<span class="counter"></span>
-		</div>
-		<?php endif; ?>
+			$position = $atts[ 'position' ] == 'left' ? ' sticky left' : ' sticky right';
+		}
 
-		<?php if ( isset($atts[ 'vk' ] ) && $atts[ 'vk' ]  ) : ?>
-		<div  class="socbtn" data-socbtn="vk">
-			<div class="icon vk"></div>
-			<span class="counter"></span>
-		</div>
-		<?php endif;
+		echo '<div class="social-button'. $position .'">';
+
+		foreach( $atts as $btn => $is_enabled ) {
+
+			if ( 1 == $is_enabled ) {
+				echo '<div class="socbtn" data-socbtn="'. $btn .'">'
+						. '<div class="icon '. $btn .'"></div>'
+						. '<span class="counter"></span>'
+					. '</div>';
+			}
+		}
 
 		echo '</div>';
 	
 	}
 }
+
+
+$words = [ 
+	'касалетка купить' => 'Заголовок #1',
+	'касалетка купить' => 'Заголовок #2',
+	'касалетка купить' => 'Заголовок #3'
+];
+
+$term = urldecode( filter_input(INPUT_GET, 'utm_term', FILTER_SANITIZE_STRING) );
+
+$multiTitle = $words[ $term ];
+
+echo $multiTitle;

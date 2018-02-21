@@ -152,6 +152,19 @@ jQuery(document).ready(function(){
             set_counter(jQuery('.counter', el), type);
         }
     });
+
+    jQuery( '.social-button' ).each(function(){
+        var 
+            innerWidth, innerHeight, el, top;
+
+        el = jQuery(this);
+
+        if ( el.hasClass( 'sticky' ) ) {
+            innerWidth = jQuery(window).innerWidth();
+            innerHeight = jQuery(window).innerHeight();
+            top = (( innerWidth >= innerHeight ? innerHeight : innerWidth ) - el.innerHeight()) / 2;
+            el.css( 'top', parseInt(top) );
+        }
+    });
 });
 })();
-

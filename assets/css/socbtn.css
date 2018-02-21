@@ -3,10 +3,28 @@
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
+}
+.social-button.sticky {
+    position: fixed;
+}
+.social-button.sticky.left,
+.social-button.sticky.right {
+    flex-direction: column !important;
+    -webkit-flex-direction:  column !important;
+}
+.social-button.sticky.left { 
+    left: 0;
+}
+.social-button.sticky.right { 
+    right: 0; 
 }
 .socbtn {
     margin-left: 5px;
     cursor:pointer;
+}
+.social-button.sticky .socbtn {
+    margin-bottom: 5px !important;
 }
 .socbtn .icon {
     width: 42px;
@@ -43,10 +61,10 @@
 }
 .socbtn .linkedin { 
     background-repeat: no-repeat;
-    background-image: url('soc_icon/in.svg');
+    background-image: url('soc_icon/linkedIn.svg');
 }
 .socbtn .linkedin:hover { 
-    background-image: url('soc_icon/in-hover.svg');
+    background-image: url('soc_icon/linkedIn-hover.svg');
     background-color: #007bb5;
 }
 .socbtn .vk { 

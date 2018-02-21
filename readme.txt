@@ -13,7 +13,7 @@ Simple WordPress plug-in social networking buttons
 
 == Description ==
 
-Use the shortcode:
+= Use the shortcode: =
 
     * in the editor: 
         > [socbtn]
@@ -26,8 +26,16 @@ Use the shortcode:
         > do_shortcode( '[socbtn]' );
         > $socbtn = ob_get_clean();
 
+= Position =
 
-By default all the social network buttons are enabled. 
+    align to the left or right edge
+    
+    [socbtn position=left]
+
+    [socbtn position=right]
+
+By default all the social network buttons are enabled.
+
 * facebook = 1
 * twitter = 1
 * google = 1
@@ -45,8 +53,8 @@ To hide the buttons of social networks, use the attribute equal to zero.
 
 == Screenshots ==
 
-1. `/assets/screen-1.png`.
-2. `/assets/screen-2.png`.
-3. `/assets/screen-3.png`.
+1. /assets/screen-1.png.
+2. /assets/screen-2.png.
+3. /assets/screen-3.png.
 
 
