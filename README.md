@@ -9,7 +9,7 @@ Wordpress plug-in simple social buttons
 [socbtn]
 
 **in HTML markup:**<br>
-<?php do_shortcode( '[socbtn]' ); ?>
+*       <?php do_shortcode( '[socbtn]' ); ?>
 
 **in the php code:**<br>
  ob_start();<br>
@@ -40,7 +40,7 @@ To hide the buttons of social networks, use the attribute equal to zero.<br>
 * Upload the plugin files to the `/wp-content/plugins/socbtn-lite` directory.
 * Activate the plugin.
 
-## Screnshot
+## Screenshot
 
 ![in the editor](assets/screen-2.png)
 ![view in the editor](assets/screen-3.png)
