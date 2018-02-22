@@ -1,7 +1,6 @@
 # socbtn-lite
 Wordpress plug-in simple social buttons
 
-## 
 * Requires at least: 4.9
 * Tested up to: 4.9
 * Requires PHP: 7.0
@@ -9,6 +8,9 @@ Wordpress plug-in simple social buttons
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 ![Screen Shot](assets/screen-1.png)
+
+* Choice of sizes small \ large. Default: large 42px.
+* Vertical auto-positioning in the center for sticky left\right modes
 
 ## Use the shortcode:
 
@@ -29,6 +31,10 @@ Wordpress plug-in simple social buttons
    [socbtn position=left]<br>
    [socbtn position=right]<br>
 
+## Size
+Setting icon sizes to 24px<br>
+   [socbtn size=small]<br>
+ 
 ## Enabled\Disdabled
 By default all the social network buttons are enabled.
 
@@ -41,7 +47,7 @@ By default all the social network buttons are enabled.
 
 To hide the buttons of social networks, use the attribute equal to zero.<br>
 [socbtn facebook=0 twitter=0 google=0 linkedIn=0]
-            	
+
 ## Installation
 
 * Upload the plugin files to the `/wp-content/plugins/socbtn-lite` directory.
@@ -50,5 +56,6 @@ To hide the buttons of social networks, use the attribute equal to zero.<br>
 ## Screenshot
 
 ![in the editor](assets/screen-2.png)
+![Screen Shot](assets/screenshot-5.png)
 ![view in the editor](assets/screen-3.png)
 ![position left](assets/screenshot-4.png)

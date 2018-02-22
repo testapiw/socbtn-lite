@@ -4,6 +4,15 @@
     display: -webkit-flex;
     flex-direction: row;
     -webkit-flex-direction: row;
+    z-index: 9999;
+    -webkit-transition: top 0.3s cubic-bezier(.37,.11,.35,1.26) 0s;
+    -moz-transition: top 0.3s cubic-bezier(.37,.11,.35,1.26) 0s;
+    -ms-transition: top 0.3s cubic-bezier(.37,.11,.35,1.26) 0s;
+    -o-transition: top 0.3s cubic-bezier(.37,.11,.35,1.26) 0s;    
+    transition: top 0.3s cubic-bezier(.37,.11,.35,1.26) 0s;
+}
+.social-button .counter {
+    display: none;
 }
 .social-button.sticky {
     position: fixed;
@@ -29,11 +38,16 @@
 .socbtn .icon {
     width: 42px;
     height: 42px;
+    background-size: contain;
     -webkit-transition: -webkit-transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;
     -moz-transition:-moz-transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;
     -ms-transition: -ms-transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;
     -o-transition: -o-transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;
     transition: transform 0.3s cubic-bezier(.39,-0.2,.16,2.22) 0s;  
+}
+.social-button.small .socbtn .icon {
+    width: 24px !important;
+    height: 24px !important; 
 }
 .socbtn .icon:hover {
     -webkit-transform: scale(1.2);

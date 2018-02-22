@@ -40,6 +40,17 @@
         }
     }
 
+    window.requestAnimFrame = (function(){
+        return  window.requestAnimationFrame       || 
+                window.webkitRequestAnimationFrame || 
+                window.mozRequestAnimationFrame    || 
+                window.oRequestAnimationFrame      || 
+                window.msRequestAnimationFrame     || 
+                function(callback, element){
+                    window.setTimeout(callback, 1000/60);
+                };
+    })();
+
 function set_counter(el, soc) {
     var script, callback, count_url;
 
@@ -138,33 +149,49 @@ function _(str, data) {
 
 jQuery(document).ready(function(){
     
+    var 
+        social_button = jQuery( '.social-button' ),
+        social_button_sticky = jQuery( '.social-button.sticky' );
+
     jQuery( document.body ).on( 'click', '.socbtn', function(ev){
         var el = jQuery(this);
         var type = el.attr( 'data-socbtn' );
         open(type);
         ev.preventDefault();
-    })
-    .each(function(){
+    });
+
+    jQuery( '.socbtn', social_button ).each(function(){
         var el = jQuery(this);
         var type = el.attr( 'data-socbtn' );
                 
         if ( src[type] && (src[type].counter || src[type].ajax) ) {
             set_counter(jQuery('.counter', el), type);
         }
+        
+    });
+    
+    resize();
+
+    jQuery( window ).resize(function(){
+        setTimeout(resize, 300);
     });
 
-    jQuery( '.social-button' ).each(function(){
-        var 
-            innerWidth, innerHeight, el, top;
+    function resize() {
+        social_button_sticky.each(function(){
+            var el = jQuery(this);
 
-        el = jQuery(this);
+            window.requestAnimFrame(function(){
+                var innerWidth, innerHeight, top, jel;
+                jel = el;
+                innerWidth = jQuery(window).innerWidth();
+                innerHeight = jQuery(window).innerHeight();
+                top = (( innerWidth >= innerHeight ? innerHeight : innerWidth ) - el.innerHeight()) / 2;
+                el.css( 'top', parseInt(top) );
+            }, el);
 
-        if ( el.hasClass( 'sticky' ) ) {
-            innerWidth = jQuery(window).innerWidth();
-            innerHeight = jQuery(window).innerHeight();
-            top = (( innerWidth >= innerHeight ? innerHeight : innerWidth ) - el.innerHeight()) / 2;
-            el.css( 'top', parseInt(top) );
-        }
-    });
+        });
+    }
+
 });
+
 })();
