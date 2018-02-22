@@ -55,7 +55,7 @@ To hide the buttons of social networks, use the attribute equal to zero.<br>
 
 ## Screenshot
 
-![in the editor](assets/screen-2.png)
-![Screen Shot](assets/screenshot-5.png)
-![view in the editor](assets/screen-3.png)
 ![position left](assets/screenshot-4.png)
+![Screen Shot](assets/screenshot-5.png)
+![in the editor](assets/screen-2.png)
+![view in the editor](assets/screen-3.png)
