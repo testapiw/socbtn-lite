@@ -12,6 +12,11 @@ Wordpress plug-in simple social buttons
 * Choice of sizes small \ large. Default: large 42px.
 * Vertical auto-positioning in the center for sticky left\right modes
 
+Info about your resource for social networks:<br>
+
+* description - meta tag [description]
+* href - URl page
+
 ## Use the shortcode:
 
 **in the editor:**<br>
