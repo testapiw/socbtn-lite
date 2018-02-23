@@ -67,15 +67,15 @@ Setting icon sizes to 24px
 
 By default all the social network buttons are enabled.
 
-* facebook = 1
-* twitter = 1
-* google = 1
-* instagram = 1
-* linkedIn = 1
-* vk = 1
+* facebook
+* twitter
+* google
+* instagram
+* linkedIn
+* vk
 
-To hide the buttons of social networks, use the attribute equal to zero.
-*    [socbtn facebook=0 twitter=0 google=0 linkedIn=0]
+To select the required set of buttons, use the `button` attribute:
+*    [socbtn button='viber, skype, yahoo, twitter, facebook']
             	
 == Installation ==
 
