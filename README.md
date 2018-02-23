@@ -12,15 +12,32 @@ Wordpress plug-in simple social buttons
 * Choice of sizes small \ large. Default: large 42px.
 * Vertical auto-positioning in the center for sticky left\right modes
 
+## Social networks buttons
+
+* facebook
+* twitter
+* google
+* instagram
+* linkedIn
+* vk
+* pinterest
+* tumblr
+* livejournal
+* viber
+* skype
+* yahoo
+
 Info about your resource for social networks:<br>
 
-* description - meta tag [description]
+* title - document.title
 * href - URl page
+* description - meta tag [description]
+
 
 ## Use the shortcode:
 
 **in the editor:**<br>
-[socbtn]
+ [socbtn]
 
 **in HTML markup:**<br>
 *       <?php do_shortcode( '[socbtn]' ); ?>
@@ -64,3 +81,8 @@ To hide the buttons of social networks, use the attribute equal to zero.<br>
 ![Screen Shot](assets/screenshot-5.png)
 ![in the editor](assets/screen-2.png)
 ![view in the editor](assets/screen-3.png)
+
+
+### 2.2
+
+Added icons: pinterest, tumblr, livejournal, viber, skype, yahoo

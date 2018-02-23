@@ -3,13 +3,13 @@
 /*
 Plugin Name: Simple social buttons
 Description: (shotrcode [socbtn]) Facebook, Twitter, Google+, LinkedIn, Instagram, VK 
-Version: 0.0.1
+Version: 0.2.2
 Author: HalcheSM
 Author URI:testapiw@gmail.com
 */
 
 define( 'SOCBTN', '1' );
-define( 'SOCBTN_VERSION', '0.0.4' );
+define( 'SOCBTN_VERSION', '0.2.2' );
 define( 'SOCBTN_DIR', plugin_dir_path(__FILE__) );
 define( 'SOCBTN_URI', plugin_dir_url(__FILE__) );
 define( 'SOCBTN_ASSETS',  SOCBTN_URI . 'assets/' );
@@ -24,19 +24,21 @@ if ( ! function_exists( 'socbtn_html' ) && ! is_admin() ) {
 	function socbtn_html( $atts ) 
 	{
 		global $count_socbtn;
-
+		
+		$allowed = array(
+			'facebook', 'twitter', 'google', 'instagram', 'linkedin', 'vk', 
+			'pinterest', 'tumblr', 'livejournal', 'viber', 'skype', 'yahoo'
+		);
+		
 		$atts = shortcode_atts( array(
-			'facebook'  => 1,
-			'twitter'	=> 1,
-			'google' 	=> 1,
-			'instagram' => 1,
-			'linkedin'  => 1,
-			'vk'	    => 1,
+			'button'	=> 'twitter, facebook, google, instagram, linkedin, vk',
 			'position'  => '',
 			'size'		=> ''
 		), $atts );
 
 		$count_socbtn++;
+
+		$buttons = array_intersect ( explode(',', str_replace(' ', '', esc_attr( $atts[ 'button' ] ) ) ), $allowed );
 
 		wp_enqueue_script( 'socbtn-lite', SOCBTN_ASSETS . 'js/socbtn.js', array( 'jquery' ), SOCBTN_VERSION, true );
 
@@ -56,15 +58,12 @@ if ( ! function_exists( 'socbtn_html' ) && ! is_admin() ) {
 
 		echo '<div class="social-button'. $class .'" data-id="'. $count_socbtn .'">';
 
-		foreach( $atts as $btn => $is_enabled ) {
-
-			if ( 1 == $is_enabled ) {
+		foreach( $buttons as $btn ) {
 
 				echo '<div class="socbtn" data-socbtn="'. $btn .'">'
 						. '<div class="icon '. $btn .'"></div>'
 						. '<span class="counter"></span>'
 					. '</div>';
-			}
 		}
 
 		echo '</div>';

@@ -104,4 +104,52 @@
 .socbtn .twitter:hover { 
     background-image: url('soc_icon/twitter-hover.svg');
     background-color: #55acee;
-}      
+} 
+.socbtn .pinterest { 
+    background-image: url('soc_icon/pinterest.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .pinterest:hover { 
+    background-image: url('soc_icon/pinterest-hover.svg');
+    background-color: #C9151C;
+} 
+.socbtn .tumblr { 
+    background-image: url('soc_icon/tumblr.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .tumblr:hover { 
+    background-image: url('soc_icon/tumblr-hover.svg');
+    background-color: #44546a;
+} 
+.socbtn .livejournal { 
+    background-image: url('soc_icon/livejournal.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .livejournal:hover { 
+    background-image: url('soc_icon/livejournal-hover.svg');
+    background-color: #459dbf;
+} 
+.socbtn .viber { 
+    background-image: url('soc_icon/viber.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .viber:hover { 
+    background-image: url('soc_icon/viber-hover.svg');
+    background-color: #74428b;
+} 
+.socbtn .skype { 
+    background-image: url('soc_icon/skype.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .skype:hover { 
+    background-image: url('soc_icon/skype-hover.svg');
+    background-color: #00b8ed;
+} 
+.socbtn .yahoo { 
+    background-image: url('soc_icon/yahoo.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .yahoo:hover { 
+    background-image: url('soc_icon/yahoo-hover.svg');
+    background-color: #9304d0;
+} 

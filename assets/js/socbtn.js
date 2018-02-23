@@ -16,27 +16,49 @@
         },
 
         'instagram' : {
-            share : 'https://www.instagram.com'
+            share :  'https://www.instagram.com'
         },
         'google'    : {
-            share: 'https://plus.google.com/share?url={{href}}',
+            share:   'https://plus.google.com/share?url={{href}}',
             ajax : googlecounter
-
         },
         'linkedIn'  : {
-            share: 'https://www.linkedin.com/shareArticle?mini=true&url={{href}}&text={{title}}&summary={{description}}&mini=true',
+            share:   'https://www.linkedin.com/shareArticle?mini=true&url={{href}}&text={{title}}&summary={{description}}&mini=true',
             counter: 'https://www.linkedin.com/countserv/count/share?url={{href}}&callback={{callback}}',
             get_count: function(counter) { return counter.count || '';}
             // linkedIn // count: 0, fCnt: "0", fCntPlusOne: "1" 
         },
         'vk'        : {
-            share : 'https://vk.com/share.php?url={{href}}&title={{title}}&image={{image}}',
+            share:   'https://vk.com/share.php?url={{href}}&title={{title}}&image={{image}}',
             counter: 'https://vk.com/share.php?act=count&index=1&url={{href}}',
             get_count: function(counter) { return counter || '';}
         },
         'twitter'   : {
-            share : 'https://twitter.com/share?url={{href}}&text={{title}}'
-
+            share :  'https://twitter.com/share?url={{href}}&text={{title}}'
+        },
+        'pinterest' : {
+            share:   'http://pinterest.com/pin/create/button/?url={{href}}&media={{image}}&description={{title}}"',
+            counter: 'https://widgets.pinterest.com/v1/urls/count.json?url={{href}}&callback={{callback}}',
+            get_count: function(counter) { return counter.count || '';} //window.fn({"url":"","count":18})
+        },
+        'blogger': {
+            share:'https://www.blogger.com/blog-this.g?u={{href}}&n={{title}}&t={{description}}'
+        },
+        'tumblr': {
+            share:  'http://www.tumblr.com/share/link?url={{href}}&name={{title}}&description={{description}}'
+            // 'https://www.tumblr.com/widgets/share/tool?canonicalUrl={{href}}&title={{title}}&caption={{description}}'
+        },
+        'livejournal': {
+            share:  'http://www.livejournal.com/update.bml?subject={{title}}&event={{href}}'
+        },
+        'viber': {
+            share:  'viber://forward?text={{href}}'
+        },
+        'skype': {
+            share:  'https://web.skype.com/share?url={{href}}'
+        },
+        'yahoo': { 
+            share:  'http://compose.mail.yahoo.com/?body={{href}}' 
         }
     }
 
@@ -61,7 +83,7 @@ function set_counter(el, soc) {
 
     script    = document.createElement('script');
     callback  = ('liteshare_' + Math.random()).replace('.', '');
-    count_url = _(src[soc].counter, { href :data.href, callback:callback });
+    count_url = _(src[soc].counter, { href: data.href, callback:callback });
 
     window[callback] = function(counter) {
         if ( 'function' === typeof src[soc].get_count ) {
