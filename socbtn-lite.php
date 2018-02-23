@@ -9,7 +9,7 @@ Author URI: https://wordpress.org/plugins/simple-social-networking-buttons/
 */
 
 define( 'SOCBTN', '1' );
-define( 'SOCBTN_VERSION', '0.2.3' );
+define( 'SOCBTN_VERSION', '0.2.4' );
 define( 'SOCBTN_DIR', plugin_dir_path(__FILE__) );
 define( 'SOCBTN_URI', plugin_dir_url(__FILE__) );
 define( 'SOCBTN_ASSETS',  SOCBTN_URI . 'assets/' );
