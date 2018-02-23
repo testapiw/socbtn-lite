@@ -80,8 +80,6 @@ To select the required set of buttons, use the `button` attribute:<br>
 ![position left](assets/screenshot-4.png)
 ![Screen Shot](assets/screenshot-5.png)
 ![in the editor](assets/screen-2.png)
-![view in the editor](assets/screen-3.png)
-
 
 ### 2.2
 
