@@ -3,9 +3,9 @@
 /*
 Plugin Name: Simple social buttons
 Description: (shotrcode [socbtn]) Facebook, Twitter, Google+, LinkedIn, Instagram, VK 
-Version: 0.2.3
+Version: 0.2.4
 Author: HalcheSM
-Author URI:testapiw@gmail.com
+Author URI: https://wordpress.org/plugins/simple-social-networking-buttons/
 */
 
 define( 'SOCBTN', '1' );
