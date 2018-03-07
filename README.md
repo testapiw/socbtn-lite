@@ -77,6 +77,7 @@ To select the required set of buttons, use the `button` attribute:<br>
 
 ## Screenshot
 
+![animation 3D cube](assets/screenshot-6.png)
 ![position left](assets/screenshot-4.png)
 ![Screen Shot](assets/screenshot-5.png)
 ![in the editor](assets/screen-2.png)
@@ -84,3 +85,23 @@ To select the required set of buttons, use the `button` attribute:<br>
 ### 2.2
 
 Added icons: pinterest, tumblr, livejournal, viber, skype, yahoo
+
+### 2.5
+
+## Added attributes Theme and Style.
+
+## Theme
+Theme allows to set the class of the main container.
+
+Example: 
+        [socbtn theme=myclass] 
+        > <div class="myclass">
+
+
+## Style
+Style attribute allows to set the positioning of the main container.<br>
+Style - left, top, right, bottom in px.<br>
+
+Example: <br>
+        [socbtn theme=myclass style="left:-80px;top:-40px;"]<br>
+*        <div class="myclass" style="left:-80px;top:-40px;">

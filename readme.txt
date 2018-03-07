@@ -5,7 +5,6 @@ Tags: social button
 Requires at least: 4.9
 Tested up to: 4.9
 Stable tag: 4.9
-Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,8 +12,11 @@ Simple WordPress plug-in social networking buttons
 
 == Description ==
 
+* Setting a custom theme and style.
+* 3D animation cube.
 * Choice of sizes small \ large. Default: large 42px.
-* Vertical auto-positioning in the center for sticky left\right modes
+* Vertical auto-positioning in the center for sticky left\right modes.
+
 
 = Social networks buttons =
 
@@ -62,7 +64,14 @@ align to the left or right edge
 = Size =
 Setting icon sizes to 24px
    [socbtn size=small]
- 
+
+= Theme =
+        do_shortcode( '[socbtn theme=3dcube]' );
+
+= Style =
+        > do_shortcode( '[socbtn theme=3dcube style="left:-80px;top:-40px;"]' );
+        > <div class="cube" style="left:-80px;top:-40px;">
+        
 = Enabled\Disdabled =
 
 By default all the social network buttons are enabled.
@@ -89,10 +98,9 @@ To select the required set of buttons, use the `button` attribute:
 3. Icon sizes to 24px.
 4. View in the editor.
 5. In the editor.
+5. Animation 3d Cube.
 
 == Changelog ==
-
-= 1.0 =
 
 = 2.0 =
 
@@ -106,3 +114,21 @@ fix linkedin icon
 = 2.2 =
 
 Added icons: pinterest, tumblr, livejournal, viber, skype, yahoo
+
+= 2.5 =
+
+Added attributes Theme and Style.
+Theme allows to set the class of the main container.
+
+Example: 
+        [socbtn theme=myclass] 
+        > <div class="myclass">
+
+
+Style attribute allows to set the positioning of the main container.
+Style - left, top, right, bottom in px.
+
+Example: 
+        [socbtn theme=myclass style="left:-80px;top:-40px;"]
+        > <div class="myclass" style="left:-80px;top:-40px;">
+

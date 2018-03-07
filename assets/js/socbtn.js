@@ -205,7 +205,7 @@ jQuery(document).ready(function(){
             window.requestAnimFrame(function(){
                 var innerWidth, innerHeight, top, jel;
                 jel = el;
-                innerWidth = jQuery(window).innerWidth();
+                innerWidth  = jQuery(window).innerWidth();
                 innerHeight = jQuery(window).innerHeight();
                 top = (( innerWidth >= innerHeight ? innerHeight : innerWidth ) - el.innerHeight()) / 2;
                 el.css( 'top', parseInt(top) );
