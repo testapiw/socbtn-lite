@@ -7,8 +7,10 @@ Wordpress plug-in simple social buttons
 * License: GPLv2 or later
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-![Screen Shot](assets/screen-1.png)
+![Screen Shot](assets/screenshot-6.png)
 
+* Setting a custom theme and style.
+* 3D animation cube.
 * Choice of sizes small \ large. Default: large 42px.
 * Vertical auto-positioning in the center for sticky left\right modes
 
