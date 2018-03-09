@@ -31,10 +31,12 @@ Wordpress plug-in simple social buttons
 
 Info about your resource for social networks:<br>
 
-* title - document.title
-* href - URl page
-* description - meta tag [description]
+* title - og:title or document.title
+* href - og:url or URl page
+* description - og:description or meta tag [description]
+* image - og:image or og:image:secure_url
 
+Meta tags **og:** can be set by plugins  **Yoast SEO**, WordPress All in One Seo, Platinum SEO Pack.
 
 ## Use the shortcode:
 

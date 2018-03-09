@@ -34,9 +34,12 @@ Simple WordPress plug-in social networking buttons
 
 = Info about your resource for social networks =
 
-* title - document.title
-* href - URl page
-* description - meta tag [description]
+* title - og:title or document.title
+* href - og:url or URl page
+* description - og:description or meta tag [description]
+* image - og:image or og:image:secure_url
+
+Meta tags **og:** can be set by plugins  **Yoast SEO**, WordPress All in One Seo, Platinum SEO Pack.
 
 = Use the shortcode: =
 
@@ -96,7 +99,7 @@ In the default installation, WordPress does not include meta tags such as descri
 To generate meta tags, use the following resources:
 plugins =Yoast SEO=, WordPress All in One Seo, Platinum SEO Pack...
 
-* =[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)=
+* **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)**
 * [WordPress All in One Seo](https://wordpress.org/plugins/all-in-one-seo-pack/)
 * [Platinum SEO Pack](https://wordpress.org/plugins/platinum-seo-pack/)
 
