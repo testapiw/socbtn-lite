@@ -77,7 +77,7 @@ To select the required set of buttons, use the `button` attribute:<br>
 * Upload the plugin files to the `/wp-content/plugins/socbtn-lite` directory.
 * Activate the plugin.
 
-## Recommendation
+## Recommendations
 
 In the default installation, WordPress does not include meta tags such as description and keywords.
 To generate meta tags, use the following resources:
@@ -120,3 +120,7 @@ Style - left, top, right, bottom in px.<br>
 Example: <br>
         [socbtn theme=myclass style="left:-80px;top:-40px;"]<br>
 *        <div class="myclass" style="left:-80px;top:-40px;">
+
+### 2.6
+fix: linkedin button
+
