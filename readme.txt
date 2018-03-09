@@ -39,7 +39,7 @@ Simple WordPress plug-in social networking buttons
 * description - og:description or meta tag [description]
 * image - og:image or og:image:secure_url
 
-Meta tags **og:** can be set by plugins  **Yoast SEO**, WordPress All in One Seo, Platinum SEO Pack.
+Meta Tags Properties **og:** can be set by plugins  **Yoast SEO**, WordPress All in One Seo, Platinum SEO Pack.
 
 = Use the shortcode: =
 
