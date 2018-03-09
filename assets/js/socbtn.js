@@ -1,11 +1,38 @@
 !(function(){
+/**
+ *  plugins wordpress-seo,  WordPress All in One Seo, Platinum SEO Pack...
+ *  https://wordpress.org/plugins/wordpress-seo/
+ *  https://wordpress.org/plugins/all-in-one-seo-pack/
+ *  https://wordpress.org/plugins/platinum-seo-pack/
+ *  https://codex.wordpress.org/Meta_Tags_in_WordPress
+ * 
+ *     <meta property="og:type" content="">
+ *     <meta property="og:title" content="">
+ *     <meta property="og:locale" content="ru_RU">
+ *     <meta property="og:description" content="">
+ *     <meta property="og:url" content="">
+ *     <meta property="og:site_name" content="">
+ *     <meta property="og:image" content="">
+ *     <meta property="og:image:width" content="">
+ *     <meta property="og:image:height" content="">
+ *     <meta name="twitter:card" content="">
+ *     <meta name="twitter:description" content="">
+ *     <meta name="twitter:title" content="">
+ *     <meta name="twitter:image" content="">
+ */
+
     var 
         description = document.querySelector('meta[name="description"]'),
+        og_description = document.querySelector('meta[property="og:description"]'),
+        og_image    = document.querySelector('meta[property="og:image"]'),
+        og_image_ssl= document.querySelector('meta[property="og:image:secure_url"]'),
+        og_url      = document.querySelector('meta[property="og:url"]'),
+        og_title    = document.querySelector('meta[property="og:title"]'),
         data = {
-            href  : encodeURIComponent( document.location.href || '' ),
-            title : encodeURIComponent( document.title || '' ),
-            description : encodeURIComponent(description.content) || '',
-            image : ''
+            href  : encodeURIComponent( og_url.content || document.location.href || '' ),
+            title : encodeURIComponent( og_title.comtent || document.title || '' ),
+            image : encodeURIComponent( og_image_ssl.content || og_image.content || '' ),
+            description : encodeURIComponent( og_description || description.content || '' )
         };
 
     var src = {
@@ -22,10 +49,11 @@
             share:   'https://plus.google.com/share?url={{href}}',
             ajax : googlecounter
         },
-        'linkedIn'  : {
+        'linkedin'  : {
             share:   'https://www.linkedin.com/shareArticle?mini=true&url={{href}}&text={{title}}&summary={{description}}&mini=true',
             counter: 'https://www.linkedin.com/countserv/count/share?url={{href}}&callback={{callback}}',
-            get_count: function(counter) { return counter.count || '';}
+            get_count: function(counter) { return counter.count || '';},
+            w: 800
             // linkedIn // count: 0, fCnt: "0", fCntPlusOne: "1" 
         },
         'vk'        : {
@@ -217,3 +245,4 @@ jQuery(document).ready(function(){
 });
 
 })();
+

@@ -17,7 +17,6 @@ Simple WordPress plug-in social networking buttons
 * Choice of sizes small \ large. Default: large 42px.
 * Vertical auto-positioning in the center for sticky left\right modes.
 
-
 = Social networks buttons =
 
 * facebook
@@ -91,6 +90,18 @@ To select the required set of buttons, use the `button` attribute:
 * Upload the plugin files to the `/wp-content/plugins/socbtn-lite` directory.
 * Activate the plugin.
 
+== Recommendations ==
+
+In the default installation, WordPress does not include meta tags such as description and keywords.
+To generate meta tags, use the following resources:
+plugins =Yoast SEO=, WordPress All in One Seo, Platinum SEO Pack...
+
+* =[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)=
+* [WordPress All in One Seo](https://wordpress.org/plugins/all-in-one-seo-pack/)
+* [Platinum SEO Pack](https://wordpress.org/plugins/platinum-seo-pack/)
+
+https://codex.wordpress.org/Meta_Tags_in_WordPress.  
+
 == Screenshots ==
 
 1. In HTML markup.
@@ -131,4 +142,7 @@ Style - left, top, right, bottom in px.
 Example: 
         [socbtn theme=myclass style="left:-80px;top:-40px;"]
         > <div class="myclass" style="left:-80px;top:-40px;">
+
+= 2.6 =
+fix: linkedin button
 

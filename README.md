@@ -77,6 +77,19 @@ To select the required set of buttons, use the `button` attribute:<br>
 * Upload the plugin files to the `/wp-content/plugins/socbtn-lite` directory.
 * Activate the plugin.
 
+## Recommendation
+
+In the default installation, WordPress does not include meta tags such as description and keywords.
+To generate meta tags, use the following resources:
+plugins **Yoast SEO**, WordPress All in One Seo, Platinum SEO Pack...
+
+* **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)**
+* [WordPress All in One Seo](https://wordpress.org/plugins/all-in-one-seo-pack/)
+* [Platinum SEO Pack](https://wordpress.org/plugins/platinum-seo-pack/)
+
+
+https://codex.wordpress.org/Meta_Tags_in_WordPress.  
+
 ## Screenshot
 
 ![animation 3D cube](assets/screenshot-6.png)
