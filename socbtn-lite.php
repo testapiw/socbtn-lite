@@ -3,13 +3,13 @@
 /*
 Plugin Name: Simple social buttons
 Description: (shotrcode [socbtn]) Facebook, Twitter, Google+, LinkedIn, Instagram, VK 
-Version: 0.2.6
+Version: 0.2.7
 Author: HalcheSM
 Author URI: https://wordpress.org/plugins/simple-social-networking-buttons/
 */
 
 define( 'SOCBTN', '1' );
-define( 'SOCBTN_VERSION', '0.2.6' );
+define( 'SOCBTN_VERSION', '0.2.7' );
 define( 'SOCBTN_DIR', plugin_dir_path(__FILE__) );
 define( 'SOCBTN_URI', plugin_dir_url(__FILE__) );
 define( 'SOCBTN_ASSETS',  SOCBTN_URI . 'assets/' );
@@ -26,8 +26,9 @@ if ( ! function_exists( 'socbtn_html' ) && ! is_admin() ) {
 		global $count_socbtn;
 		
 		$allowed = array(
-			'facebook', 'twitter', 'google', 'instagram', 'linkedin', 'vk', 
-			'pinterest', 'tumblr', 'livejournal', 'viber', 'skype', 'yahoo'
+			'facebook', 'twitter', 'google', 'instagram', 'linkedin',  
+			'pinterest', 'tumblr', 'livejournal', 'viber', 'skype', 'yahoo',
+			'vk', 'ya', 'mailru', 'ok'
 		);
 		
 		$atts = shortcode_atts( array(

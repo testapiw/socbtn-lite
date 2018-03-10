@@ -153,3 +153,27 @@
     background-image: url('soc_icon/yahoo-hover.svg');
     background-color: #9304d0;
 } 
+.socbtn .ok { 
+    background-image: url('soc_icon/ok.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .ok:hover { 
+    background-image: url('soc_icon/ok-hover.svg');
+    background-color: #ff6501;
+} 
+.socbtn .ya { 
+    background-image: url('soc_icon/ya.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .ya:hover { 
+    background-image: url('soc_icon/ya-hover.svg');
+    background-color: #f00;
+}
+.socbtn .mailru { 
+    background-image: url('soc_icon/mailru.svg');
+    background-repeat: no-repeat;
+}
+.socbtn .mailru:hover { 
+    background-image: url('soc_icon/mailru-hover.svg');
+    background-color: #168de2;
+} 

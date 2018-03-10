@@ -22,22 +22,22 @@
  */
 
     var 
-        description = document.querySelector('meta[name="description"]'),
-        og_description = document.querySelector('meta[property="og:description"]'),
-        og_image    = document.querySelector('meta[property="og:image"]'),
-        og_image_ssl= document.querySelector('meta[property="og:image:secure_url"]'),
-        og_url      = document.querySelector('meta[property="og:url"]'),
-        og_title    = document.querySelector('meta[property="og:title"]'),
+        description    = meta_content('name="description"'),
+        og_description = meta_content('property="og:description"'),
+        og_image_ssl   = meta_content('property="og:image:secure_url"'),
+        og_image       = meta_content('property="og:image"'),
+        og_title       = meta_content('property="og:title"'),
+        og_url         = meta_content('property="og:url"'),
         data = {
-            href  : encodeURIComponent( og_url.content || document.location.href || '' ),
-            title : encodeURIComponent( og_title.comtent || document.title || '' ),
-            image : encodeURIComponent( og_image_ssl.content || og_image.content || '' ),
-            description : encodeURIComponent( og_description || description.content || '' )
+            href:        encodeURIComponent( og_url || document.location.href || '' ),
+            title:       encodeURIComponent( og_title || document.title || '' ),
+            image:       encodeURIComponent( og_image_ssl || og_image || '' ),
+            description: encodeURIComponent( og_description || description.content || '' )
         };
 
     var src = {
         'facebook'  : {
-            share: 'https://facebook.com/sharer/sharer.php?u={{href}}&t={{title}}',
+            share:   'https://facebook.com/sharer/sharer.php?u={{href}}&t={{title}}',
             counter: 'https://graph.facebook.com/?id={{href}}&callback={{callback}}',
             get_count: function(counter) { return counter.share.share_count || '';}
         },
@@ -60,6 +60,16 @@
             share:   'https://vk.com/share.php?url={{href}}&title={{title}}&image={{image}}',
             counter: 'https://vk.com/share.php?act=count&index=1&url={{href}}',
             get_count: function(counter) { return counter || '';}
+        },
+		'ok'        : {
+			share:   'https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl={{href}}&title={{title}}'
+        },
+        'ya': {
+            share:   'http://wow.ya.ru/posts_share_link.xml?url={{href}}&title={{title}}&body={{description}}'
+        }
+        ,
+        'mailru': {
+            share:   'http://connect.mail.ru/share?url={{href}}&title={{title}}&description={{description}}&imageurl={{image}}'
         },
         'twitter'   : {
             share :  'https://twitter.com/share?url={{href}}&text={{title}}'
@@ -243,6 +253,14 @@ jQuery(document).ready(function(){
     }
 
 });
+
+/**
+ * 
+ * @param {*} selector - 'meta[name="description"]'
+ */
+function meta_content( selector ) {
+   return '' + ( (document.querySelector( 'meta[' + selector + ']' )||{}).content || '' );
+}
 
 })();
 

@@ -21,20 +21,23 @@ Wordpress plug-in simple social buttons
 * google
 * instagram
 * linkedIn
-* vk
 * pinterest
 * tumblr
 * livejournal
 * viber
 * skype
 * yahoo
+* vk
+* ok
+* yandex
+* mail.ru
 
 Info about your resource for social networks:<br>
 
-* title - og:title or document.title
-* href - og:url or URl page
-* description - og:description or meta tag [description]
-* image - og:image or og:image:secure_url
+* **title** - og:title or document.title
+* **href** - og:url or URl page
+* **description** - og:description or meta tag [description]
+* **image** - og:image or og:image:secure_url
 
 Meta tags **og:** can be set by plugins  **Yoast SEO**, WordPress All in One Seo, Platinum SEO Pack.
 
@@ -126,3 +129,5 @@ Example: <br>
 ### 2.6
 fix: linkedin button
 
+### 2.7
+Added icons: ok, yandex, mailru

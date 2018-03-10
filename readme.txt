@@ -24,20 +24,23 @@ Simple WordPress plug-in social networking buttons
 * google
 * instagram
 * linkedIn
-* vk
 * pinterest
 * tumblr
 * livejournal
 * viber
 * skype
 * yahoo
+* vk
+* ok
+* yandex
+* mail.ru
 
 = Info about your resource for social networks =
 
-* title - og:title or document.title
-* href - og:url or URl page
-* description - og:description or meta tag [description]
-* image - og:image or og:image:secure_url
+* **title** - og:title or document.title
+* **href** - og:url or URl page
+* **description** - og:description or meta tag [description]
+* **image** - og:image or og:image:secure_url
 
 Meta Tags Properties **og:** can be set by plugins  **Yoast SEO**, WordPress All in One Seo, Platinum SEO Pack.
 
@@ -97,7 +100,7 @@ To select the required set of buttons, use the `button` attribute:
 
 In the default installation, WordPress does not include meta tags such as description and keywords.
 To generate meta tags, use the following resources:
-plugins =Yoast SEO=, WordPress All in One Seo, Platinum SEO Pack...
+plugins **Yoast SEO**, WordPress All in One Seo, Platinum SEO Pack...
 
 * **[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)**
 * [WordPress All in One Seo](https://wordpress.org/plugins/all-in-one-seo-pack/)
@@ -149,3 +152,5 @@ Example:
 = 2.6 =
 fix: linkedin button
 
+= 2.7 =
+Added icons: ok, yandex, mailru
